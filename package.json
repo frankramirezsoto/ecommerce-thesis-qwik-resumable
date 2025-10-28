@@ -4,14 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --mode ssr",
     "build": "qwik build",
     "build.client": "vite build",
-    "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.server": "vite build -c adapters/vercel-edge/vite.config.ts",
-    "build.types": "tsc --incremental --noEmit",
-    "preview": "qwik serve dist",
+    "build.server": "qwik check-client src dist && vite build -c adapters/vercel-edge/vite.config.ts",
+    "deploy": "vercel deploy",
+    "dev": "vite --mode ssr",
     "lint": "eslint .",
+    "preview": "qwik serve dist",
     "test": "vitest"
   },
   "dependencies": {
@@ -26,6 +25,7 @@
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
+    "vercel": "^29.1.1",
     "vite": "^5.1.5",
     "vite-tsconfig-paths": "^4.3.1",
     "vitest": "^1.2.2"
