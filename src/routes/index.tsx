@@ -81,7 +81,7 @@ export default component$(() => {
           </div>
           <div class='flex justify-end animate-float-in'>
             <img
-              src="./assets/hero.png"
+              src="hero.png"
               alt="Hero Image"
               class="max-w-sm opacity-90 animate-float-in"
             />
