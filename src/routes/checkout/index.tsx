@@ -24,7 +24,7 @@ export default component$(() => {
   useTask$(({ track }) => {
     track(() => app.state.user);
     if (!app.state.user) {
-      navigate('/auth');
+      //navigate('/auth');
     }
   });
 
@@ -36,7 +36,7 @@ export default component$(() => {
         title: 'Cart is empty',
         description: 'Add some items to your cart first',
       });
-      navigate('/products');
+      //navigate('/products');
     }
     state.cart = cart;
   });
